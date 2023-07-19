@@ -1,8 +1,8 @@
 import express from 'express';
 import "reflect-metadata"
 import { container } from 'tsyringe';
-import { NewsController } from '../news.controller';
-import { NewsService } from '../news.service';
+import { NewsController } from '../controllers/news.controller';
+import { NewsService } from '../services/news.service';
 
 
 export const newsRouter = express.Router();

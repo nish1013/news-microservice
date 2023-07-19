@@ -1,5 +1,5 @@
 import express from 'express';
-import { connectToDatabase } from './news/database.service';
+import { connectToDatabase } from './news/services/database.service';
 import { newsRouter } from './news/routes/news.router';
 
 const app = express();

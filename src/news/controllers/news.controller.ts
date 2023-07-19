@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { injectable, inject } from 'tsyringe';
-import { NewsService } from './news.service';
+import { NewsService } from '../services/news.service';
 
 @injectable()
 export class NewsController {

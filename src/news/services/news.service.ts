@@ -1,6 +1,6 @@
 import { injectable, singleton } from 'tsyringe';
-import newsData from './data/newsData.json';
-import { News } from './news.interface';
+import newsData from '../data/newsData.json';
+import { News } from '../models/news.interface';
 
 @singleton()
 export class NewsService {
