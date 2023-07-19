@@ -1,8 +1,8 @@
-import { injectable } from 'tsyringe';
+import { injectable, singleton } from 'tsyringe';
 import newsData from './data/newsData.json';
 import { News } from './news.interface';
 
-@injectable()
+@singleton()
 export class NewsService {
   getAllNews(): News[] {
     return newsData;
