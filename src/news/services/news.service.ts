@@ -1,14 +1,17 @@
 import { injectable, singleton } from 'tsyringe';
 import newsData from '../data/newsData.json';
-import { News } from '../models/news.interface';
+import { News as NewsL} from '../models/news.interface';
+import News from '../models/news'
+import { collections } from './database.service';
 
 @singleton()
 export class NewsService {
-  getAllNews(): News[] {
-    return newsData;
+  async getAllNews(): Promise<News[]> {
+    const news = await collections.news?.find({}).toArray() as News[]
+    return news;
   }
 
-  getNewsById(id: string): News | undefined {
-    return newsData.find((news: News) => news.id === id);
+  getNewsById(id: string): NewsL | undefined {
+    return newsData.find((news: NewsL) => news.id === id);
   }
 }

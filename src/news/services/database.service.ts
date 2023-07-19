@@ -1,7 +1,8 @@
 import * as mongoDB from "mongodb";
 import * as dotenv from "dotenv";
+import News from "../models/news";
 
-export const collections: {news?: mongoDB.Collection} = {};
+export const collections: {news?: mongoDB.Collection<News>} = {};
 
 export async function connectToDatabase() {
     dotenv.config();
@@ -11,7 +12,7 @@ export async function connectToDatabase() {
 
     const db = client.db(process.env.DB_NAME);
 
-    const newsCollection: mongoDB.Collection = db.collection(process.env.COLLECTION_NAME!);
+    const newsCollection: mongoDB.Collection<News> = db.collection<News>(process.env.COLLECTION_NAME!);
 
     collections.news = newsCollection;
 

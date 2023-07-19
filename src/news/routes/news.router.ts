@@ -12,9 +12,9 @@ newsRouter.use(express.json())
 container.register(NewsService, { useClass: NewsService });
 container.register(NewsController, {useClass: NewsController});
 
-newsRouter.get('/', (req, res) => {
+newsRouter.get('/', async (req, res) => {
   const newsController = container.resolve(NewsController);
-  return newsController.getAllNews(req, res);
+  return await newsController.getAllNews(req, res);
 });
 
 // newsRouter.get('/api/news/:id', (req, res) => {
