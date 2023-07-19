@@ -1,0 +1,24 @@
+{
+  "name": "news-microservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && node dist/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "reflect-metadata": "^0.1.13",
+    "ts-node": "^10.9.1",
+    "tsyringe": "^4.8.0",
+    "typescript": "^5.1.6"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17"
+  }
+}

@@ -1,0 +1,12 @@
+[
+    {
+      "id": "1",
+      "title": "Breaking News 1",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+      "id": "2",
+      "title": "Breaking News 2",
+      "content": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
+    }
+  ]
