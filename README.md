@@ -8,6 +8,12 @@ This is a simple News Management Node.js application developed using TypeScript 
 1. [tsyringe](https://github.com/microsoft/tsyringe)
 2. [reflect-metadata](https://github.com/rbuckton/reflect-metadata)
 
+## Database 
+- [MongoDB] (https://mongodb.com)
+
+For Dev we use a MongoDB Free tier cluster
+https://cloud.mongodb.com/
+
 ## Getting Started
 
 To run the application locally, follow the steps below:
@@ -15,6 +21,10 @@ To run the application locally, follow the steps below:
 ### Prerequisites
 
 - Node.js and npm should be installed on your machine.
+- Define following ENVIRONMENT variables.
+   - DB_CONN_STRING
+   - DB_NAME
+   - COLLECTION_NAME
 
 ### Installation
 
