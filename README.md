@@ -54,6 +54,10 @@ The application provides simple APIs for managing news articles. The news data i
 - `PUT /news/:id`: Update a news article by ID. (Note: This is a sample app, and no data will be saved persistently.)
 - `DELETE /news/:id`: Delete a news article by ID. (Note: This is a sample app, and no data will be saved persistently.)
 
+## References
+
+1. [Mongodb with Typescript](https://www.mongodb.com/compatibility/using-typescript-with-mongodb-tutorial)
+
 ## Contributing
 
 Contributions are welcome! Feel free to submit issues, suggest improvements, or open pull requests.
