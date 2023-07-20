@@ -1,13 +1,13 @@
 import { Request, Response } from 'express';
 import { injectable, inject } from 'tsyringe';
-import { NewsService } from './news.service';
+import { NewsService } from '../services/news.service';
 
 @injectable()
 export class NewsController {
   constructor(@inject(NewsService) private newsService: NewsService) {}
 
-  getAllNews(req: Request, res: Response): Response {
-    const news = this.newsService.getAllNews();
+  async getAllNews(req: Request, res: Response): Promise<Response> {
+    const news = await this.newsService.getAllNews();
     return res.json(news);
   }
 

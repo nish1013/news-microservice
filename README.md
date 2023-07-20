@@ -8,6 +8,12 @@ This is a simple News Management Node.js application developed using TypeScript 
 1. [tsyringe](https://github.com/microsoft/tsyringe)
 2. [reflect-metadata](https://github.com/rbuckton/reflect-metadata)
 
+## Database 
+- [MongoDB](https://mongodb.com)
+
+For Dev we use a MongoDB Free tier cluster
+https://cloud.mongodb.com/
+
 ## Getting Started
 
 To run the application locally, follow the steps below:
@@ -15,6 +21,10 @@ To run the application locally, follow the steps below:
 ### Prerequisites
 
 - Node.js and npm should be installed on your machine.
+- Define following ENVIRONMENT variables.
+   - ```DB_CONN_STRING```
+   - ```DB_NAME```
+   - ```COLLECTION_NAME```
 
 ### Installation
 
@@ -53,6 +63,10 @@ The application provides simple APIs for managing news articles. The news data i
 - `POST /news`: Create a new news article. (Note: This is a sample app, and no data will be saved persistently.)
 - `PUT /news/:id`: Update a news article by ID. (Note: This is a sample app, and no data will be saved persistently.)
 - `DELETE /news/:id`: Delete a news article by ID. (Note: This is a sample app, and no data will be saved persistently.)
+
+## References
+
+1. [Mongodb with Typescript](https://www.mongodb.com/compatibility/using-typescript-with-mongodb-tutorial)
 
 ## Contributing
 
