@@ -60,9 +60,9 @@ The application provides simple APIs for managing news articles. The news data i
 
 - `GET /news`: Get all news articles.
 - `GET /news/:id`: Get a specific news article by ID.
-- `POST /news`: Create a new news article. (Note: This is a sample app, and no data will be saved persistently.)
-- `PUT /news/:id`: Update a news article by ID. (Note: This is a sample app, and no data will be saved persistently.)
-- `DELETE /news/:id`: Delete a news article by ID. (Note: This is a sample app, and no data will be saved persistently.)
+- `POST /news`: Create a new news article. (Note: TODO)
+- `PUT /news/:id`: Update a news article by ID. (Note: TODO)
+- `DELETE /news/:id`: Delete a news article by ID. (Note: TODO)
 
 ## References
 
