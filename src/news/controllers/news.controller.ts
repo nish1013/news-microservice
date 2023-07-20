@@ -11,9 +11,9 @@ export class NewsController {
     return res.json(news);
   }
 
-  getNewsById(req: Request, res: Response): Response {
+  async getNewsById(req: Request, res: Response): Promise<Response> {
     const { id } = req.params;
-    const news = this.newsService.getNewsById(id);
+    const news = await this.newsService.getNewsById(id);
     if (news) {
       return res.json(news);
     }
