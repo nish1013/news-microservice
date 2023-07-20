@@ -17,7 +17,7 @@ newsRouter.get('/', async (req, res) => {
   return await newsController.getAllNews(req, res);
 });
 
-// newsRouter.get('/api/news/:id', (req, res) => {
-//   const newsController = container.resolve(NewsController);
-//   return newsController.getNewsById(req, res);
-// });
+newsRouter.get('/:id', async (req, res) => {
+  const newsController = container.resolve(NewsController);
+  return newsController.getNewsById(req, res);
+});

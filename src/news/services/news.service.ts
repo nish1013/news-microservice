@@ -1,8 +1,7 @@
-import { injectable, singleton } from 'tsyringe';
-import newsData from '../data/newsData.json';
-import { News as NewsL} from '../models/news.interface';
+import { singleton } from 'tsyringe';
 import News from '../models/news'
 import { collections } from './database.service';
+import { ObjectId } from 'mongodb';
 
 @singleton()
 export class NewsService {
@@ -11,7 +10,9 @@ export class NewsService {
     return news;
   }
 
-  getNewsById(id: string): NewsL | undefined {
-    return newsData.find((news: NewsL) => news.id === id);
+  async getNewsById(id: string): Promise<News | undefined> {
+    const query = {_id: new ObjectId(id)}
+    const news = (await collections.news?.findOne(query)) as News
+    return news;
   }
 }
